@@ -1,4 +1,4 @@
-# Padrino Example App on OpenShift #
+# Padrino OpenShift quickstart #
 
 Quickstart for [Padrino](http://www.padrinorb.com/) application for OpenShift.
 
