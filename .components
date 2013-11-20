@@ -1,0 +1,9 @@
+---
+:orm: sequel
+:test: none
+:mock: none
+:script: jquery
+:renderer: haml
+:stylesheet: sass
+:namespace: PadrinoExample
+:migration_format: number
