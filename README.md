@@ -1,9 +1,6 @@
 # Padrino Example App on OpenShift #
-Quickstart for [Padrino](http://www.padrinorb.com/) application for OpenShift.
 
-The easiest way to install this application is to use the [OpenShift
-Instant Application][template]. If you'd like to install it
-manually, follow [these directions](#manual-installation).
+Quickstart for [Padrino](http://www.padrinorb.com/) application for OpenShift.
 
 ## OpenShift Considerations ##
 These are some special considerations you may need to keep in mind when
@@ -31,7 +28,8 @@ of the `example/controllers/hello.rb#index` action.
 To remove the Example sub-application, you can run the following command:
 
 ```
-$ padrino g app example -d
+cd your_application/
+padrino g app example -d
 ```
 
 ### Assets ###
@@ -40,36 +38,13 @@ baked in.
 
 ## Manual Installation ##
 
-1. Create an account at http://openshift.redhat.com/
+1. Create an account at <a href="http://openshift.redhat.com">http://openshift.redhat.com</a>
 
-1. Create a Ruby application
+2. Create a Padrino application:
 
-    ```
-    rhc app create -a padrinoapp -t ruby-1.9
-    ```
-
-1. Add database support to your application
-
-    ```
-    rhc cartridge add -a padrinoapp -c postgresql-9.2
-    ```
-
-1. Add this upstream Padrino quickstart repository
-
-    ```
-    cd railsapp
-    git remote add upstream -m master git://github.com/mfojtik/padrino-example.git
-    git pull -s recursive -X theirs upstream master
-    ```
-
-1. Push your new code
-
-    ```
-    git push
-    ```
-
-1. That's it! Enjoy your new Padrino application!
-
+```
+rhc app create -a padrinoapp ruby-1.9 postgresql-9.2 --from-code https://github.com/mfojtik/padrino-example
+```
 
 License
 -------
